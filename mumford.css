@@ -1,10 +1,12 @@
 body{
   background-color: tomato;
   color: white;
+  text-align: center;
 }
 marquee{
   border-style: solid;
   border-color: white;
 }
+
 
 

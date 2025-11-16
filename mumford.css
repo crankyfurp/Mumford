@@ -2,4 +2,9 @@ body{
   background-color: tomato;
   color: white;
 }
+marquee{
+  border-style: solid;
+  border-color: white;
+}
+
 

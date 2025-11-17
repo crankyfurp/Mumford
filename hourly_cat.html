@@ -3,4 +3,19 @@
     <title>hourly cat</title>
     <link rel="stylesheet" href="./mumford.css" type="text/css">
   </head>
+  <body>
+      <script>
+      fetch("catlist.json")
+        .then(r => r.json())
+        .then(catImages => {
+          function updateCat() {
+            const hour = Math.floor(Date.now() / (1000*60*60));
+            const index = hour % catImages.length;
+            document.getElementById("catImage").src = "cats/" + catImages[index];
+          }
+          updateCat();
+          setInterval(updateCat, 60000);
+        });
+      </script>
+  </body>
 </html>
